@@ -1,6 +1,6 @@
 // Configurable contact details
 export const CONTACT = {
-  phone: "919820996758",
+  phone: "+91 9820996758",
   phoneDisplay: "+91 9820996758",
   email: "maharashtrahiringservices@gmail.com",
   address: "Shop No. 8, Tulip Society, Sector 6, Ghansoli, Navi Mumbai – 400701",
