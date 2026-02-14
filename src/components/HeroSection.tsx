@@ -22,21 +22,25 @@ export default function HeroSection() {
         <div className="max-w-3xl">
 
           <p className="text-accent font-semibold text-sm md:text-base tracking-widest uppercase mb-4 animate-fade-in-up">
-            Trusted Industrial Partner
+            Maharashtra’s Trusted Industrial Equipment Partner
           </p>
 
           <h1
             className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-secondary-foreground leading-tight mb-6 animate-fade-in-up"
             style={{ animationDelay: "0.1s" }}
           >
-            Reliable Industrial Equipment & Generator Rental Solutions
+            Maharashtra Hiring Services
+            <br className="hidden md:block" />
+            For Industrial & Infrastructure Projects
           </h1>
 
           <p
             className="text-secondary-foreground/80 text-base md:text-lg mb-8 max-w-2xl animate-fade-in-up"
             style={{ animationDelay: "0.2s" }}
           >
-            Sales | AMC | Installation | Heavy Equipment on Rent
+            We provide high-performance generators, boom lifts, cranes, 
+            and heavy equipment backed by AMC support, expert installation, 
+            and 24/7 service reliability across Maharashtra.
           </p>
 
           <div
@@ -44,7 +48,7 @@ export default function HeroSection() {
             style={{ animationDelay: "0.3s" }}
           >
             <Link
-              to="/services"
+              to="/product-services"
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity"
             >
               <ArrowDown className="h-4 w-4" /> View Services
