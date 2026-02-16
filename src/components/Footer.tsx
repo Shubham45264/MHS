@@ -5,17 +5,18 @@ import { CONTACT } from "@/lib/config";
 const quickLinks = [
   { label: "Home", to: "/" },
   { label: "About Us", to: "/about" },
-  { label: "Product Services", to: "/product-services" },
-  { label: "Industrial Services", to: "/industrial-services" },
-  { label: "Rental Services", to: "/rental-services" },
+  // { label: "Product Services", to: "/product-services" },
+  // { label: "Industrial Services", to: "/industrial-services" },
+  // { label: "Rental Services", to: "/rental-services" },
+  {label:"Services", to:"/Services"},
   { label: "Contact", to: "/contact" },
 ];
 
 const serviceLinks = [
   { label: "Boom Lift", to: "/product-services" },
   { label: "Scissor Lift", to: "/product-services" },
-  { label: "Compressor", to: "/rental-services" },
-  { label: "Diesel Generators", to: "/product-services" },
+  { label: "Truck Mounted ManLift", to: "/TruckMounted" },
+  { label: "Cranes", to: "/Cranes" },
 ];
 
 export default function Footer() {

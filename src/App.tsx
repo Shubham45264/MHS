@@ -7,9 +7,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Index from "./pages/Index";
 import About from "./pages/About";
-import ProductServices from "./pages/ProductServices";
-import IndustrialServices from "./pages/IndustrialServices";
-import RentalServices from "./pages/RentalServices";
+import Services from "./pages/Services";
+
+// ✅ Service Pages (should be inside /pages folder)
+import BoomLift from "./components/BoomLift";
+import ScissorLift from "./components/ScissorLift";
+import TruckMountedManLift from "./components/TruckMounted";
+import Cranes from "./components/Cranes";
+import Gallery from "./components/Gallery"; // ✅ NEW
+
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -30,17 +36,27 @@ const App = () => (
             {/* About */}
             <Route path="/about" element={<About />} />
 
-            {/* Individual Service Pages */}
-            <Route path="/product-services" element={<ProductServices />} />
-            <Route path="/industrial-services" element={<IndustrialServices />} />
-            <Route path="/rental-services" element={<RentalServices />} />
+            {/* Services Main Page */}
+            <Route path="/services" element={<Services />} />
+
+            {/* Dedicated Service Pages */}
+            <Route path="/services/boom-lift" element={<BoomLift />} />
+            <Route path="/services/scissor-lift" element={<ScissorLift />} />
+            <Route
+              path="/services/truck-mounted-manlift"
+              element={<TruckMountedManLift />}
+            />
+            <Route path="/services/cranes" element={<Cranes />} />
+
+            {/* ✅ Gallery Page */}
+            <Route path="/gallery" element={<Gallery />} />
 
             {/* Contact */}
             <Route path="/contact" element={<Contact />} />
 
           </Route>
 
-          {/* 404 */}
+          {/* 404 Page */}
           <Route path="*" element={<NotFound />} />
 
         </Routes>

@@ -3,10 +3,7 @@
 // ===============================
 
 export const CONTACT = {
-  // 🔹 Clean number (NO +, NO spaces) – used for tel & WhatsApp
   phone: "919820996758",
-
-  // 🔹 Display number (UI only)
   phoneDisplay: "+91 9820996758",
 
   email: "maharashtrahiringservices@gmail.com",

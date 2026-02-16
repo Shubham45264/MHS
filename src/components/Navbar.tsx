@@ -6,9 +6,8 @@ import { CONTACT } from "@/lib/config";
 const navLinks = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
-  { label: "Product Services", to: "/product-services" },
-  { label: "Industrial Services", to: "/industrial-services" },
-  { label: "Rental Services", to: "/rental-services" },
+  { label: "Services", to: "/Services" },
+  {label:"Gallery", to:"/Gallery"},
   { label: "Contact", to: "/contact" },
 ];
 
