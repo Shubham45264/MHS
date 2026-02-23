@@ -3,6 +3,8 @@ import { Phone, Mail, MapPin, Star, Clock, Loader2 } from "lucide-react";
 import { CONTACT } from "@/lib/config";
 import { toast } from "sonner";
 
+const BACKEND_URL = "https://mhs-4jj9.onrender.com";
+
 export default function ContactSection() {
   const [form, setForm] = useState({
     name: "",
@@ -20,19 +22,23 @@ export default function ContactSection() {
   const [loading, setLoading] = useState(false);
   const [reviewLoading, setReviewLoading] = useState(false);
 
+  // ---------------- ENQUIRY SUBMIT ----------------
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+
     try {
-      const response = await fetch("/api/enquiry", {
+      const response = await fetch(`${BACKEND_URL}/api/enquiry`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
+
       const data = await response.json();
-      if (data.success) {
+
+      if (response.ok && data.success) {
         toast.success("Enquiry Sent!", {
-          description: "Thank you for your enquiry! We will get back to you shortly.",
+          description: "Thank you! We will contact you shortly.",
         });
         setForm({ name: "", email: "", phone: "", message: "" });
       } else {
@@ -42,32 +48,38 @@ export default function ContactSection() {
       }
     } catch (error) {
       toast.error("Connection Error", {
-        description: "Could not connect to the server. Please check your connection.",
+        description: "Could not connect to the server.",
       });
     } finally {
       setLoading(false);
     }
   };
 
+  // ---------------- REVIEW SUBMIT ----------------
   const handleReviewSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     if (review.rating === 0) {
       toast.error("Rating Required", {
-        description: "Please provide a star rating before submitting.",
+        description: "Please select a star rating.",
       });
       return;
     }
+
     setReviewLoading(true);
+
     try {
-      const response = await fetch("/api/review", {
+      const response = await fetch(`${BACKEND_URL}/api/review`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(review),
       });
+
       const data = await response.json();
-      if (data.success) {
+
+      if (response.ok && data.success) {
         toast.success("Review Submitted!", {
-          description: "Thank you for your valuable feedback!",
+          description: "Thank you for your feedback!",
         });
         setReview({ name: "", rating: 0, comment: "" });
       } else {
@@ -77,7 +89,7 @@ export default function ContactSection() {
       }
     } catch (error) {
       toast.error("Connection Error", {
-        description: "Could not connect to the server. Please check your connection.",
+        description: "Could not connect to the server.",
       });
     } finally {
       setReviewLoading(false);
@@ -88,7 +100,7 @@ export default function ContactSection() {
     <section className="py-28 bg-muted/20">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* ================= HEADER ================= */}
+        {/* HEADER */}
         <div className="text-center mb-20">
           <p className="text-accent font-bold uppercase tracking-[0.3em] text-sm mb-4">
             Get In Touch
@@ -97,54 +109,59 @@ export default function ContactSection() {
             Let's <span className="text-accent underline decoration-primary/10 underline-offset-8">Build Together</span>
           </h2>
           <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
-            Whether you need industrial equipment rental, generator services,
-            or maintenance solutions — our team is ready to assist you.
+            Whether you need industrial equipment rental or maintenance solutions — our team is ready to assist you.
           </p>
         </div>
 
-        {/* ================= CONTACT GRID ================= */}
+        {/* CONTACT GRID */}
         <div className="grid lg:grid-cols-2 gap-16 items-start mb-28">
 
-          {/* LEFT SIDE - INFO & MAP */}
+          {/* LEFT SIDE */}
           <div className="space-y-8">
 
             <div className="grid sm:grid-cols-2 gap-6">
+
               {/* Contact Card */}
-              <div className="bg-white p-8 rounded-[2rem] shadow-xl border border-gray-50 hover:shadow-2xl transition-all duration-500">
+              <div className="bg-white p-8 rounded-[2rem] shadow-xl border border-gray-50">
                 <h3 className="text-xl font-bold text-[#0B3C5D] mb-6 flex items-center gap-2">
-                  <span className="w-8 h-8 bg-accent/10 rounded-xl flex items-center justify-center">
-                    <Phone className="w-4 h-4 text-accent" />
+                  <span className="w-8 h-8 bg-[#F4B400]/10 rounded-lg flex items-center justify-center">
+                    <Phone className="w-4 h-4 text-[#F4B400]" />
                   </span>
                   Contact Info
                 </h3>
+
                 <div className="space-y-4 text-gray-600">
-                  <div className="flex flex-col">
+                  <div>
                     <span className="text-xs uppercase font-bold text-gray-400">Phone</span>
-                    <span className="font-semibold text-primary">{CONTACT.phoneDisplay}</span>
+                    <span className="font-semibold text-[#0B3C5D]">{CONTACT.phoneDisplay}</span>
                   </div>
-                  <div className="flex flex-col">
+
+                  <div>
                     <span className="text-xs uppercase font-bold text-gray-400">Email</span>
-                    <span className="font-semibold text-primary break-all">{CONTACT.email}</span>
+                    <span className="font-semibold text-[#0B3C5D] break-all">{CONTACT.email}</span>
                   </div>
                 </div>
               </div>
 
               {/* Hours Card */}
               <div className="bg-white p-8 rounded-[2rem] shadow-xl border border-gray-50 hover:shadow-2xl transition-all duration-500">
-                <h3 className="text-xl font-bold text-primary mb-6 flex items-center gap-2">
-                  <span className="w-8 h-8 bg-accent/10 rounded-xl flex items-center justify-center">
-                    <Clock className="w-4 h-4 text-accent" />
+                <h3 className="text-xl font-bold text-[#0B3C5D] mb-6 flex items-center gap-2">
+                  <span className="w-8 h-8 bg-[#F4B400]/10 rounded-lg flex items-center justify-center">
+                    <Clock className="w-4 h-4 text-[#F4B400]" />
                   </span>
                   Office Hours
                 </h3>
+
                 <div className="space-y-4 text-gray-600">
-                  <div className="flex flex-col">
+                  <div>
                     <span className="text-xs uppercase font-bold text-gray-400">Mon - Sat</span>
-                    <span className="font-semibold text-primary">10:00 AM - 07:00 PM</span>
+                    <span className="font-semibold text-[#0B3C5D]">10:00 AM - 07:00 PM</span>
                   </div>
-                  <div className="flex flex-col">
+                  <div>
                     <span className="text-xs uppercase font-bold text-gray-400">Sunday</span>
-                    <span className="font-semibold text-red-500">Closed</span>
+                    <div className="font-semibold text-red-500">
+                      Closed
+                    </div>
                   </div>
                 </div>
               </div>
@@ -152,19 +169,19 @@ export default function ContactSection() {
 
             {/* Address Card */}
             <div className="bg-white p-8 rounded-[2rem] shadow-xl border border-gray-100 italic transition-all duration-500">
-              <h3 className="text-xl font-bold text-primary mb-4 flex items-center gap-2 not-italic">
-                <span className="w-8 h-8 bg-accent/10 rounded-xl flex items-center justify-center">
-                  <MapPin className="w-4 h-4 text-accent" />
+              <h3 className="text-xl font-bold text-[#0B3C5D] mb-4 flex items-center gap-2 not-italic">
+                <span className="w-8 h-8 bg-[#F4B400]/10 rounded-lg flex items-center justify-center">
+                  <MapPin className="w-4 h-4 text-[#F4B400]" />
                 </span>
                 Our Location
               </h3>
-              <p className="not-italic text-gray-600 leading-relaxed font-medium">
+              <p className="text-gray-600 leading-relaxed font-medium">
                 {CONTACT.address}
               </p>
             </div>
 
             {/* MAP */}
-            <div className="rounded-[2.5rem] overflow-hidden shadow-2xl h-80 border-4 border-white group">
+            <div className="rounded-[2.5rem] overflow-hidden shadow-2xl h-80 border-4 border-white">
               <iframe
                 src={CONTACT.mapEmbedUrl}
                 width="100%"
@@ -172,17 +189,17 @@ export default function ContactSection() {
                 style={{ border: 0 }}
                 loading="lazy"
                 title="Office Location"
-                className="transition-all duration-700"
               />
             </div>
+
           </div>
 
           {/* RIGHT SIDE - ENQUIRY FORM */}
-          <div className="bg-white p-12 rounded-[3.5rem] shadow-2xl border border-slate-100 relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-40 h-40 bg-accent opacity-5 -mr-20 -mt-20 rounded-full group-hover:scale-150 transition-transform duration-1000"></div>
+          <div className="bg-white p-12 rounded-[3rem] shadow-2xl border border-gray-50 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#F4B400] opacity-5 -mr-16 -mt-16 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
 
             <div className="relative">
-              <h3 className="text-3xl font-extrabold text-primary mb-3">
+              <h3 className="text-3xl font-bold text-[#0B3C5D] mb-2">
                 Send an Enquiry
               </h3>
               <p className="text-gray-500 mb-10">We usually respond within 2 business hours.</p>
@@ -240,7 +257,7 @@ export default function ContactSection() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-primary text-white py-5 rounded-2xl font-bold text-lg hover:bg-primary/95 shadow-xl shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="w-full bg-[#0B3C5D] text-white py-5 rounded-2xl font-bold text-lg hover:bg-[#F4B400] hover:text-black shadow-xl shadow-[#0B3C5D]/10 hover:shadow-[#F4B400]/20 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:transform-none"
                 >
                   {loading ? (
                     <>
@@ -258,26 +275,36 @@ export default function ContactSection() {
 
         {/* ================= REVIEW SECTION ================= */}
         <div className="max-w-3xl mx-auto">
-          <div className="bg-white p-12 rounded-[3rem] shadow-2xl border border-slate-100 text-center">
-            <h3 className="text-3xl font-extrabold text-primary mb-6">
+          <div className="bg-white p-10 rounded-3xl shadow-xl text-center">
+            <h3 className="text-3xl font-bold text-[#0B3C5D] mb-6">
               Leave a Review
             </h3>
-
             <p className="text-gray-500 mb-10">
-              We value your feedback. Share your experience with us.
+              We usually respond within 2 business hours.
             </p>
 
-            <form onSubmit={handleReviewSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
 
               <input
                 type="text"
                 required
-                placeholder="Your Name"
-                value={review.name}
+                placeholder="Full Name"
+                value={form.name}
                 onChange={(e) =>
-                  setReview({ ...review, name: e.target.value })
+                  setForm({ ...form, name: e.target.value })
                 }
-                className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent outline-none transition-all"
+                className="w-full bg-gray-50 rounded-2xl px-5 py-4 focus:ring-2 focus:ring-[#F4B400] outline-none"
+              />
+
+              <input
+                type="tel"
+                required
+                placeholder="Phone Number"
+                value={form.phone}
+                onChange={(e) =>
+                  setForm({ ...form, phone: e.target.value })
+                }
+                className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#F4B400] outline-none"
               />
 
               {/* STAR RATING */}
@@ -289,7 +316,7 @@ export default function ContactSection() {
                       setReview({ ...review, rating: star })
                     }
                     className={`h-7 w-7 cursor-pointer transition ${review.rating >= star
-                      ? "text-accent fill-accent"
+                      ? "text-[#F4B400] fill-[#F4B400]"
                       : "text-gray-300"
                       }`}
                   />
@@ -299,32 +326,33 @@ export default function ContactSection() {
               <textarea
                 rows={4}
                 required
-                placeholder="Write your review..."
-                value={review.comment}
+                placeholder="Your Message"
+                value={form.message}
                 onChange={(e) =>
-                  setReview({ ...review, comment: e.target.value })
+                  setForm({ ...form, message: e.target.value })
                 }
-                className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent outline-none transition-all resize-none"
+                className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#F4B400] outline-none resize-none"
               />
 
               <button
                 type="submit"
                 disabled={reviewLoading}
-                className="w-full bg-accent text-primary py-5 rounded-2xl font-bold hover:opacity-95 transition-all shadow-xl shadow-accent/10 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed hover:scale-[1.02] transform"
+                className="w-full bg-[#F4B400] text-black py-4 rounded-xl font-bold hover:opacity-90 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                {reviewLoading ? (
+                {loading ? (
                   <>
                     <Loader2 className="w-5 h-5 animate-spin" />
-                    Submitting Review...
+                    Sending...
                   </>
                 ) : (
-                  "Submit Review"
+                  "Submit Enquiry"
                 )}
               </button>
+
             </form>
           </div>
-        </div>
 
+        </div>
       </div>
     </section>
   );
