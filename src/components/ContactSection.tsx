@@ -24,7 +24,7 @@ export default function ContactSection() {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:5000/api/enquiry", {
+      const response = await fetch("/api/enquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
@@ -59,7 +59,7 @@ export default function ContactSection() {
     }
     setReviewLoading(true);
     try {
-      const response = await fetch("http://localhost:5000/api/review", {
+      const response = await fetch("/api/review", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(review),

@@ -21,6 +21,18 @@ app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok' });
 });
 
+// Serve static files from the React app
+app.use(express.static(join(__dirname, 'dist')));
+
+// API routes here... (enquiry and review)
+
+// Catch-all route to serve the React app for any non-API routes
+app.get('*', (req, res) => {
+  if (!req.path.startsWith('/api')) {
+    res.sendFile(join(__dirname, 'dist', 'index.html'));
+  }
+});
+
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   host: 'smtp.gmail.com',
@@ -117,7 +129,7 @@ app.post('/api/review', async (req, res) => {
   }
 });
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
