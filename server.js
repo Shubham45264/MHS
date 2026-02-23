@@ -27,7 +27,7 @@ app.use(express.static(join(__dirname, 'dist')));
 // API routes here... (enquiry and review)
 
 // Catch-all route to serve the React app for any non-API routes
-app.get('*', (req, res) => {
+app.get('/*', (req, res) => {
   if (!req.path.startsWith('/api')) {
     res.sendFile(join(__dirname, 'dist', 'index.html'));
   }
