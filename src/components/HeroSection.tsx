@@ -24,15 +24,15 @@ export default function HeroSection() {
           <img
             src={heroBg}
             alt="Industrial equipment site"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover grayscale brightness-75"
           />
-          <div className="absolute inset-0 bg-gradient-to-tr from-primary via-primary/90 to-primary/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/85 to-secondary/70" />
         </div>
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-6 pt-24 pb-16 text-left">
           <div className="max-w-4xl">
-            <p className="text-accent font-bold text-sm tracking-[0.25em] uppercase mb-6 animate-fade-in">
+            <p className="text-yellow-400 font-semibold text-sm tracking-[0.2em] uppercase mb-5">
               Maharashtra’s Trusted Industrial Equipment Partner
             </p>
 
@@ -46,7 +46,7 @@ export default function HeroSection() {
               </span>
             </h1>
 
-            <p className="text-slate-300 text-lg md:text-xl max-w-2xl mb-12 leading-relaxed">
+            <p className="text-slate-300 text-base md:text-lg max-w-2xl mb-10">
               We provide high-performance generators, diesel boom lifts 17-18 m,
               cranes, and heavy equipment backed by AMC support, expert installation,
               and 24/7 service reliability across Maharashtra.
@@ -57,7 +57,7 @@ export default function HeroSection() {
                 href="/Maharashtra hiring services brochure pdf (2).pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-accent text-primary px-8 py-3.5 rounded-full font-bold hover:opacity-90 transition-all hover:scale-105 shadow-xl shadow-accent/20"
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold hover:opacity-90 transition"
               >
                 <ArrowDown className="h-4 w-4" /> Download Brochure
               </a>
@@ -68,7 +68,7 @@ export default function HeroSection() {
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-bold hover:bg-[#22c35e] transition-all hover:scale-105 shadow-xl shadow-green-500/20"
+                className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-green-700 transition"
               >
                 <MessageCircle className="h-4 w-4" /> WhatsApp Enquiry
               </a>
@@ -78,7 +78,7 @@ export default function HeroSection() {
                   "General Enquiry",
                   "Hello, I would like to enquire about your services."
                 )}
-                className="inline-flex items-center gap-2 bg-slate-800/80 backdrop-blur-md text-white px-8 py-3.5 rounded-full font-bold hover:bg-slate-700 transition-all hover:scale-105"
+                className="inline-flex items-center gap-2 bg-amber-500 text-white px-6 py-3 rounded-md font-semibold hover:bg-amber-600 transition"
               >
                 <Mail className="h-4 w-4" /> Email Us
               </a>
