@@ -82,19 +82,19 @@ const sectors = [
 
 export default function Services() {
   return (
-    <div className="bg-[#F8FAFC]">
+    <div className="bg-muted/30 min-h-screen">
       {/* Existing Services Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#0B3C5D] mb-14">
-            Product <span className="text-[#F4B400]">Services</span>
+          <h1 className="text-5xl font-extrabold text-primary mb-16 text-center">
+            Product <span className="text-accent underline decoration-primary/5 underline-offset-8">Services</span>
           </h1>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 group"
+                className="bg-white rounded-3xl p-2 shadow-sm border border-slate-100 card-hover overflow-hidden group"
               >
                 {/* Image Section */}
                 <div className="h-72 w-full overflow-hidden bg-white flex items-center justify-center p-6">
@@ -107,7 +107,7 @@ export default function Services() {
 
                 {/* Content */}
                 <div className="p-8">
-                  <h3 className="text-xl font-semibold text-[#0B3C5D] mb-4">
+                  <h3 className="text-2xl font-bold text-primary mb-4">
                     {service.title}
                   </h3>
 
@@ -117,9 +117,9 @@ export default function Services() {
 
                   <Link
                     to={service.link}
-                    className="text-[#F4B400] font-semibold text-base hover:underline transition"
+                    className="inline-flex items-center text-accent font-bold text-base tracking-wide hover:gap-2 transition-all"
                   >
-                    Read More →
+                    Read More <span className="ml-1 text-lg">→</span>
                   </Link>
                 </div>
               </div>
@@ -129,14 +129,18 @@ export default function Services() {
       </section>
 
       {/* 🔷 Sectors We Serve */}
-      <section className="py-24 bg-[#0B3C5D] text-white">
+      <section className="py-24 bg-premium-gradient text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-accent rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary rounded-full blur-[120px] translate-x-1/2 translate-y-1/2"></div>
+        </div>
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-6">
             <div className="max-w-3xl">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Sectors We <span className="text-[#F4B400]">Serve</span>
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-8">
+                Sectors We <span className="text-accent underline decoration-white/10 underline-offset-8">Serve</span>
               </h2>
-              <div className="w-20 h-1.5 bg-[#F4B400] mb-6 rounded-full"></div>
+              <div className="w-24 h-2 bg-accent mb-10 rounded-full shadow-lg shadow-accent/20"></div>
               <p className="text-gray-300 text-lg leading-relaxed">
                 It has been our unswerving mission to cater to a variety of industries and engineering applications,
                 which help us constantly challenge ourselves to stand up to the needs of the infrastructure industry.
@@ -144,14 +148,14 @@ export default function Services() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {sectors.map((sector, index) => (
               <div
                 key={index}
-                className="group bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-3xl hover:bg-[#F4B400] hover:border-[#F4B400] transition-all duration-500 cursor-default"
+                className="group bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-[2.5rem] hover:bg-accent hover:border-accent transition-all duration-500 cursor-default shadow-xl hover:shadow-accent/20"
               >
-                <div className="mb-6 inline-block p-4 bg-white/10 rounded-2xl group-hover:bg-black/10 transition-colors duration-500">
-                  <sector.icon className="w-8 h-8 text-[#F4B400] group-hover:text-black transition-colors duration-500" />
+                <div className="mb-8 inline-block p-5 bg-white/10 rounded-2xl group-hover:bg-black/5 transition-all duration-500">
+                  <sector.icon className="w-10 h-10 text-accent group-hover:text-primary transition-all duration-500" />
                 </div>
                 <h4 className="text-xl font-bold group-hover:text-black transition-colors duration-500">
                   {sector.name}
@@ -163,13 +167,13 @@ export default function Services() {
       </section>
 
       {/* 🔷 Clients Section */}
-      <section className="py-24 bg-white overflow-hidden">
+      < section className="py-24 bg-white overflow-hidden" >
         <div className="max-w-7xl mx-auto px-6 mb-16">
           <div className="text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#0B3C5D]">
-              Trusted by <span className="text-[#F4B400]">Industry Leaders</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-primary">
+              Trusted by <span className="text-accent underline decoration-primary/5 underline-offset-8">Industry Leaders</span>
             </h2>
-            <div className="w-20 h-1 bg-[#F4B400] mx-auto mt-4 rounded-full"></div>
+            <div className="w-24 h-1.5 bg-accent mx-auto mt-6 rounded-full shadow-lg shadow-accent/20"></div>
             <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
               We take pride in serving some of the most prestigious organizations across various industries.
             </p>
@@ -182,7 +186,7 @@ export default function Services() {
             {[...clientLogos, ...clientLogos].map((client, index) => (
               <div
                 key={index}
-                className="mx-8 flex items-center justify-center p-6 w-64 h-32 bg-gray-50 rounded-2xl border border-gray-100 hover:border-[#F4B400]/30 hover:shadow-xl hover:bg-white transition-all duration-300 transform hover:-translate-y-1"
+                className="mx-8 flex items-center justify-center p-8 w-72 h-40 bg-white/50 backdrop-blur-sm rounded-[2rem] border border-slate-100/50 hover:border-accent/40 shadow-sm card-hover transform transition-all duration-300"
               >
                 <img
                   src={client.src}

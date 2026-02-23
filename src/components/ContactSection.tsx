@@ -85,16 +85,16 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="py-28 bg-[#F8FAFC]">
+    <section className="py-28 bg-muted/20">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* ================= HEADER ================= */}
         <div className="text-center mb-20">
-          <p className="text-[#F4B400] font-semibold uppercase tracking-widest text-sm mb-3">
-            Contact Us
+          <p className="text-accent font-bold uppercase tracking-[0.3em] text-sm mb-4">
+            Get In Touch
           </p>
-          <h2 className="text-4xl font-bold text-[#0B3C5D]">
-            Let’s Build Something Great Together
+          <h2 className="text-4xl md:text-5xl font-extrabold text-primary">
+            Let's <span className="text-accent underline decoration-primary/10 underline-offset-8">Build Together</span>
           </h2>
           <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
             Whether you need industrial equipment rental, generator services,
@@ -112,35 +112,35 @@ export default function ContactSection() {
               {/* Contact Card */}
               <div className="bg-white p-8 rounded-[2rem] shadow-xl border border-gray-50 hover:shadow-2xl transition-all duration-500">
                 <h3 className="text-xl font-bold text-[#0B3C5D] mb-6 flex items-center gap-2">
-                  <span className="w-8 h-8 bg-[#F4B400]/10 rounded-lg flex items-center justify-center">
-                    <Phone className="w-4 h-4 text-[#F4B400]" />
+                  <span className="w-8 h-8 bg-accent/10 rounded-xl flex items-center justify-center">
+                    <Phone className="w-4 h-4 text-accent" />
                   </span>
                   Contact Info
                 </h3>
                 <div className="space-y-4 text-gray-600">
                   <div className="flex flex-col">
                     <span className="text-xs uppercase font-bold text-gray-400">Phone</span>
-                    <span className="font-semibold text-[#0B3C5D]">{CONTACT.phoneDisplay}</span>
+                    <span className="font-semibold text-primary">{CONTACT.phoneDisplay}</span>
                   </div>
                   <div className="flex flex-col">
                     <span className="text-xs uppercase font-bold text-gray-400">Email</span>
-                    <span className="font-semibold text-[#0B3C5D] break-all">{CONTACT.email}</span>
+                    <span className="font-semibold text-primary break-all">{CONTACT.email}</span>
                   </div>
                 </div>
               </div>
 
               {/* Hours Card */}
               <div className="bg-white p-8 rounded-[2rem] shadow-xl border border-gray-50 hover:shadow-2xl transition-all duration-500">
-                <h3 className="text-xl font-bold text-[#0B3C5D] mb-6 flex items-center gap-2">
-                  <span className="w-8 h-8 bg-[#F4B400]/10 rounded-lg flex items-center justify-center">
-                    <Clock className="w-4 h-4 text-[#F4B400]" />
+                <h3 className="text-xl font-bold text-primary mb-6 flex items-center gap-2">
+                  <span className="w-8 h-8 bg-accent/10 rounded-xl flex items-center justify-center">
+                    <Clock className="w-4 h-4 text-accent" />
                   </span>
                   Office Hours
                 </h3>
                 <div className="space-y-4 text-gray-600">
                   <div className="flex flex-col">
                     <span className="text-xs uppercase font-bold text-gray-400">Mon - Sat</span>
-                    <span className="font-semibold text-[#0B3C5D]">10:00 AM - 07:00 PM</span>
+                    <span className="font-semibold text-primary">10:00 AM - 07:00 PM</span>
                   </div>
                   <div className="flex flex-col">
                     <span className="text-xs uppercase font-bold text-gray-400">Sunday</span>
@@ -152,9 +152,9 @@ export default function ContactSection() {
 
             {/* Address Card */}
             <div className="bg-white p-8 rounded-[2rem] shadow-xl border border-gray-100 italic transition-all duration-500">
-              <h3 className="text-xl font-bold text-[#0B3C5D] mb-4 flex items-center gap-2 not-italic">
-                <span className="w-8 h-8 bg-[#F4B400]/10 rounded-lg flex items-center justify-center">
-                  <MapPin className="w-4 h-4 text-[#F4B400]" />
+              <h3 className="text-xl font-bold text-primary mb-4 flex items-center gap-2 not-italic">
+                <span className="w-8 h-8 bg-accent/10 rounded-xl flex items-center justify-center">
+                  <MapPin className="w-4 h-4 text-accent" />
                 </span>
                 Our Location
               </h3>
@@ -178,11 +178,11 @@ export default function ContactSection() {
           </div>
 
           {/* RIGHT SIDE - ENQUIRY FORM */}
-          <div className="bg-white p-12 rounded-[3rem] shadow-2xl border border-gray-50 relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-[#F4B400] opacity-5 -mr-16 -mt-16 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
+          <div className="bg-white p-12 rounded-[3.5rem] shadow-2xl border border-slate-100 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-40 h-40 bg-accent opacity-5 -mr-20 -mt-20 rounded-full group-hover:scale-150 transition-transform duration-1000"></div>
 
             <div className="relative">
-              <h3 className="text-3xl font-bold text-[#0B3C5D] mb-2">
+              <h3 className="text-3xl font-extrabold text-primary mb-3">
                 Send an Enquiry
               </h3>
               <p className="text-gray-500 mb-10">We usually respond within 2 business hours.</p>
@@ -240,7 +240,7 @@ export default function ContactSection() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-[#0B3C5D] text-white py-5 rounded-2xl font-bold text-lg hover:bg-[#F4B400] hover:text-black shadow-xl shadow-[#0B3C5D]/10 hover:shadow-[#F4B400]/20 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:transform-none"
+                  className="w-full bg-primary text-white py-5 rounded-2xl font-bold text-lg hover:bg-primary/95 shadow-xl shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   {loading ? (
                     <>
@@ -258,8 +258,8 @@ export default function ContactSection() {
 
         {/* ================= REVIEW SECTION ================= */}
         <div className="max-w-3xl mx-auto">
-          <div className="bg-white p-10 rounded-3xl shadow-xl text-center">
-            <h3 className="text-3xl font-bold text-[#0B3C5D] mb-6">
+          <div className="bg-white p-12 rounded-[3rem] shadow-2xl border border-slate-100 text-center">
+            <h3 className="text-3xl font-extrabold text-primary mb-6">
               Leave a Review
             </h3>
 
@@ -277,7 +277,7 @@ export default function ContactSection() {
                 onChange={(e) =>
                   setReview({ ...review, name: e.target.value })
                 }
-                className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#F4B400] outline-none"
+                className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent outline-none transition-all"
               />
 
               {/* STAR RATING */}
@@ -289,7 +289,7 @@ export default function ContactSection() {
                       setReview({ ...review, rating: star })
                     }
                     className={`h-7 w-7 cursor-pointer transition ${review.rating >= star
-                      ? "text-[#F4B400] fill-[#F4B400]"
+                      ? "text-accent fill-accent"
                       : "text-gray-300"
                       }`}
                   />
@@ -304,13 +304,13 @@ export default function ContactSection() {
                 onChange={(e) =>
                   setReview({ ...review, comment: e.target.value })
                 }
-                className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#F4B400] outline-none resize-none"
+                className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent outline-none transition-all resize-none"
               />
 
               <button
                 type="submit"
                 disabled={reviewLoading}
-                className="w-full bg-[#F4B400] text-black py-4 rounded-xl font-bold hover:opacity-90 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                className="w-full bg-accent text-primary py-5 rounded-2xl font-bold hover:opacity-95 transition-all shadow-xl shadow-accent/10 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed hover:scale-[1.02] transform"
               >
                 {reviewLoading ? (
                   <>

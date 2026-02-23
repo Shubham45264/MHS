@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 
-export default function TruckMountedManLift() {
+export default function TruckMountedBoomLift() {
   return (
-    <section className="py-24 bg-[#F8FAFC]">
+    <section className="py-24 bg-muted/40">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Heading */}
         <div className="mb-12">
           <h1 className="text-4xl font-bold text-[#0B3C5D] mb-4">
-            Truck Mounted <span className="text-[#F4B400]">Boom Lift</span>
+            Truck Mounted <span className="text-accent underline decoration-primary/10 underline-offset-8">Boom Lift</span>
           </h1>
 
           <p className="text-gray-600 text-lg leading-relaxed max-w-3xl">
@@ -27,13 +27,13 @@ export default function TruckMountedManLift() {
             <img
               src="/Mounted-Boom-Lift.jpeg"
               alt="Truck Mounted Boom Lift"
-              className="max-h-96 object-contain"
+              className="max-h-96 object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-105"
             />
           </div>
 
           {/* Features */}
           <div>
-            <h2 className="text-2xl font-semibold text-[#0B3C5D] mb-6">
+            <h2 className="text-3xl font-bold text-primary mb-6">
               Key Features
             </h2>
 
@@ -47,7 +47,7 @@ export default function TruckMountedManLift() {
 
             <Link
               to="/contact"
-              className="inline-block mt-8 bg-[#F4B400] text-black font-semibold px-6 py-3 rounded-md hover:opacity-90 transition"
+              className="inline-block mt-10 bg-primary text-white font-bold px-10 py-4 rounded-full shadow-xl shadow-primary/20 hover:scale-105 transition-all"
             >
               Enquire Now
             </Link>

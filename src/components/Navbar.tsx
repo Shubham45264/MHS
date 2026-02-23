@@ -7,7 +7,7 @@ const navLinks = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
   { label: "Services", to: "/Services" },
-  {label:"Gallery", to:"/Gallery"},
+  { label: "Gallery", to: "/Gallery" },
   { label: "Contact", to: "/contact" },
 ];
 
@@ -62,13 +62,11 @@ export default function Navbar() {
 
       {/* 🔷 MAIN NAVBAR */}
       <nav
-        className={`fixed left-0 right-0 z-40 transition-all duration-300 ${
-          isHome ? "top-[40px]" : "top-0"
-        } ${
-          scrolled || !isHome
-            ? "bg-white shadow-md"
-            : "bg-white/10 backdrop-blur-md"
-        }`}
+        className={`fixed left-0 right-0 z-40 transition-all duration-500 ${isHome ? "top-[40px]" : "top-0"
+          } ${scrolled || !isHome
+            ? "glass-morphism shadow-lg py-1"
+            : "bg-transparent backdrop-blur-sm shadow-none"
+          }`}
       >
         <div className="w-full px-10 lg:px-16">
           <div className="flex items-center h-16">
@@ -81,9 +79,8 @@ export default function Navbar() {
                 className="h-10 w-auto object-contain"
               />
               <span
-                className={`text-lg font-bold transition ${
-                  scrolled || !isHome ? "text-[#0B3C5D]" : "text-white"
-                }`}
+                className={`text-lg font-bold tracking-tight transition ${scrolled || !isHome ? "text-primary" : "text-white"
+                  }`}
               >
                 Maharashtra Hiring Services
               </span>
@@ -95,15 +92,15 @@ export default function Navbar() {
                 <Link
                   key={l.to}
                   to={l.to}
-                  className={`text-sm font-medium transition ${
-                    location.pathname === l.to
-                      ? "text-[#F4B400]"
+                  className={`text-sm font-semibold tracking-wide transition-all duration-300 relative group ${location.pathname === l.to
+                      ? "text-accent"
                       : scrolled || !isHome
-                      ? "text-gray-700 hover:text-[#0B3C5D]"
-                      : "text-white hover:text-[#F4B400]"
-                  }`}
+                        ? "text-slate-700 hover:text-primary"
+                        : "text-white hover:text-accent"
+                    }`}
                 >
                   {l.label}
+                  <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full ${location.pathname === l.to ? "w-full" : ""}`}></span>
                 </Link>
               ))}
             </div>
@@ -112,11 +109,10 @@ export default function Navbar() {
             <div className="hidden md:flex">
               <a
                 href={`tel:${CONTACT.phone}`}
-                className={`inline-flex items-center gap-2 px-5 py-2 rounded-md text-sm font-semibold transition ${
-                  scrolled || !isHome
-                    ? "bg-[#0B3C5D] text-white"
-                    : "bg-[#F4B400] text-black"
-                }`}
+                className={`inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold shadow-lg transition-transform hover:scale-105 active:scale-95 ${scrolled || !isHome
+                    ? "bg-primary text-white"
+                    : "bg-accent text-primary"
+                  }`}
               >
                 <Phone className="h-4 w-4" /> Call Now
               </a>
@@ -124,9 +120,8 @@ export default function Navbar() {
 
             {/* 🔹 MOBILE MENU BUTTON */}
             <button
-              className={`md:hidden ml-auto ${
-                scrolled || !isHome ? "text-[#0B3C5D]" : "text-white"
-              }`}
+              className={`md:hidden ml-auto ${scrolled || !isHome ? "text-[#0B3C5D]" : "text-white"
+                }`}
               onClick={() => setOpen(!open)}
             >
               {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

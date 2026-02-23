@@ -13,15 +13,15 @@ const quickLinks = [
 ];
 
 const serviceLinks = [
-  { label: "Diesel Boom Lift 17-18 m", to: "/product-services" },
-  { label: "Scissor Lift", to: "/product-services" },
-  { label: "Truck Mounted Boom Lift", to: "/TruckMounted" },
-  { label: "Cranes", to: "/Cranes" },
+  { label: "Diesel Boom Lift 17-18 m", to: "/services/boom-lift" },
+  { label: "Scissor Lift", to: "/services/scissor-lift" },
+  { label: "Truck Mounted Boom Lift", to: "/services/truck-mounted-manlift" },
+  { label: "Cranes", to: "/services/cranes" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0B3C5D] text-white pt-14 pb-6">
+    <footer className="bg-premium-gradient text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* ================= MAIN GRID ================= */}
@@ -48,7 +48,7 @@ export default function Footer() {
 
           {/* 🔹 Quick Links */}
           <div>
-            <h4 className="font-semibold text-sm uppercase tracking-wider text-[#F4B400] mb-4">
+            <h4 className="font-semibold text-sm uppercase tracking-wider text-accent flex-shrink-0">
               Quick Links
             </h4>
             <ul className="space-y-3">
@@ -56,7 +56,7 @@ export default function Footer() {
                 <li key={l.to}>
                   <Link
                     to={l.to}
-                    className="text-sm text-white/70 hover:text-[#F4B400] transition-colors"
+                    className="text-sm text-white/70 hover:text-accent transition-colors"
                   >
                     {l.label}
                   </Link>
@@ -67,7 +67,7 @@ export default function Footer() {
 
           {/* 🔹 Services */}
           <div>
-            <h4 className="font-semibold text-sm uppercase tracking-wider text-[#F4B400] mb-4">
+            <h4 className="font-semibold text-sm uppercase tracking-wider text-accent flex-shrink-0">
               Our Services
             </h4>
             <ul className="space-y-3">
@@ -75,7 +75,7 @@ export default function Footer() {
                 <li key={s.label}>
                   <Link
                     to={s.to}
-                    className="text-sm text-white/70 hover:text-[#F4B400] transition-colors"
+                    className="text-sm text-white/70 hover:text-accent transition-colors"
                   >
                     {s.label}
                   </Link>
@@ -86,7 +86,7 @@ export default function Footer() {
 
           {/* 🔹 Contact Info */}
           <div>
-            <h4 className="font-semibold text-sm uppercase tracking-wider text-[#F4B400] mb-4">
+            <h4 className="font-semibold text-sm uppercase tracking-wider text-accent flex-shrink-0">
               Contact Info
             </h4>
 
@@ -94,10 +94,10 @@ export default function Footer() {
 
               {/* Phone 1 */}
               <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-[#F4B400] flex-shrink-0" />
+                <Phone className="h-5 w-5 text-accent flex-shrink-0" />
                 <a
                   href="tel:+919820996758"
-                  className="hover:text-[#F4B400] transition-colors"
+                  className="hover:text-accent transition-colors"
                 >
                   +91 9820996758
                 </a>
@@ -105,10 +105,10 @@ export default function Footer() {
 
               {/* Phone 2 */}
               <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-[#F4B400] flex-shrink-0" />
+                <Phone className="h-5 w-5 text-accent flex-shrink-0" />
                 <a
                   href="tel:+919082616592"
-                  className="hover:text-[#F4B400] transition-colors"
+                  className="hover:text-accent transition-colors"
                 >
                   +91 9082616592
                 </a>
@@ -116,10 +116,10 @@ export default function Footer() {
 
               {/* Phone 3 */}
               <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-[#F4B400] flex-shrink-0" />
+                <Phone className="h-5 w-5 text-accent flex-shrink-0" />
                 <a
                   href="tel:+918655035263"
-                  className="hover:text-[#F4B400] transition-colors"
+                  className="hover:text-accent transition-colors"
                 >
                   +91 8655035263
                 </a>
@@ -127,10 +127,10 @@ export default function Footer() {
 
               {/* Email */}
               <li className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-[#F4B400] flex-shrink-0" />
+                <Mail className="h-5 w-5 text-accent flex-shrink-0" />
                 <a
                   href={`mailto:${CONTACT.email}`}
-                  className="hover:text-[#F4B400] transition-colors"
+                  className="hover:text-accent transition-colors"
                 >
                   {CONTACT.email}
                 </a>
@@ -138,7 +138,7 @@ export default function Footer() {
 
               {/* Address */}
               <li className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-[#F4B400] flex-shrink-0 mt-1" />
+                <MapPin className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
                 <span className="leading-relaxed">
                   Shop No. 8, Tulip Society,<br />
                   Sector 6, Ghansoli,<br />

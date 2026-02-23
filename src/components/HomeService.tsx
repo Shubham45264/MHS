@@ -20,19 +20,19 @@ const allServices = [
 
 export default function HomeServices() {
   return (
-    <section className="py-20 bg-[#F8FAFC]">
+    <section className="py-24 bg-muted/30">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Section Heading */}
         <div className="text-center mb-14">
-          <h3 className="text-3xl md:text-4xl font-bold text-[#0B3C5D]">
-            Services <span className="text-[#F4B400]">We Offer</span>
+          <h3 className="text-3xl md:text-5xl font-extrabold text-primary">
+            Services <span className="text-accent underline decoration-primary/10 underline-offset-8">We Offer</span>
           </h3>
-          <div className="w-20 h-1.5 bg-[#F4B400] mx-auto mt-4 rounded-full"></div>
+          <div className="w-24 h-2 bg-accent mx-auto mt-6 rounded-full shadow-lg shadow-accent/20"></div>
 
           <Link
             to="/services"
-            className="inline-block mt-6 bg-[#F4B400] text-black font-semibold px-6 py-2 rounded-full hover:opacity-90 transition"
+            className="inline-block mt-10 bg-primary text-white font-bold px-8 py-3 rounded-full hover:bg-primary/90 transition-all hover:scale-105 shadow-xl shadow-primary/10"
           >
             See All Services
           </Link>
@@ -43,7 +43,7 @@ export default function HomeServices() {
           {allServices.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-sm hover:shadow-2xl hover:-translate-y-3 transition-all duration-300 overflow-hidden group"
+              className="bg-white rounded-3xl p-2 shadow-sm border border-slate-100 card-hover overflow-hidden group"
             >
               {/* Image */}
               <div className="h-60 bg-white flex items-center justify-center p-6">
@@ -56,7 +56,7 @@ export default function HomeServices() {
 
               {/* Content */}
               <div className="p-6">
-                <h4 className="text-lg font-semibold text-[#0B3C5D] mb-3">
+                <h4 className="text-xl font-bold text-primary mb-3">
                   {service.title}
                 </h4>
 
@@ -67,9 +67,9 @@ export default function HomeServices() {
                 {/* ✅ Redirect to Services Page */}
                 <Link
                   to="/services"
-                  className="text-[#F4B400] font-semibold text-sm hover:underline"
+                  className="inline-flex items-center text-accent font-bold text-sm tracking-wide hover:gap-2 transition-all"
                 >
-                  Know More →
+                  Know More <span className="ml-1 text-lg">→</span>
                 </Link>
               </div>
             </div>

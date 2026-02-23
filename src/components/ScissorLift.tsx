@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 export default function ScissorLift() {
   return (
-    <section className="py-24 bg-[#F8FAFC]">
+    <section className="py-24 bg-muted/40">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Heading */}
         <div className="mb-14">
           <h1 className="text-4xl font-bold text-[#0B3C5D] mb-4">
-            Scissor <span className="text-[#F4B400]">Lift</span>
+            Scissor <span className="text-accent underline decoration-primary/10 underline-offset-8">Lift</span>
           </h1>
 
           <p className="text-gray-600 text-lg leading-relaxed max-w-3xl">
@@ -33,7 +33,7 @@ export default function ScissorLift() {
 
           {/* Detailed Info */}
           <div>
-            <h2 className="text-2xl font-semibold text-[#0B3C5D] mb-6">
+            <h2 className="text-3xl font-bold text-primary mb-6">
               Why Choose Our Scissor Lift?
             </h2>
 
@@ -60,7 +60,7 @@ export default function ScissorLift() {
         {/* Supporting Images (Product Showcase) */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-20">
 
-          <div className="bg-white rounded-2xl shadow-md p-4">
+          <div className="bg-white rounded-3xl p-2 shadow-sm border border-slate-100 card-hover overflow-hidden">
             <img
               src="/sizzor 2.jpeg"
               alt="Scissor Lift View 2"
@@ -68,7 +68,7 @@ export default function ScissorLift() {
             />
           </div>
 
-          <div className="bg-white rounded-2xl shadow-md p-4">
+          <div className="bg-white rounded-3xl p-2 shadow-sm border border-slate-100 card-hover overflow-hidden">
             <img
               src="/sizzor 3.jpeg"
               alt="Scissor Lift View 3"
@@ -76,7 +76,7 @@ export default function ScissorLift() {
             />
           </div>
 
-          <div className="bg-white rounded-2xl shadow-md p-4">
+          <div className="bg-white rounded-3xl p-2 shadow-sm border border-slate-100 card-hover overflow-hidden">
             <img
               src="/Sizzor 4.jpeg"
               alt="Scissor Lift View 4"
@@ -84,7 +84,7 @@ export default function ScissorLift() {
             />
           </div>
 
-          <div className="bg-white rounded-2xl shadow-md p-4">
+          <div className="bg-white rounded-3xl p-2 shadow-sm border border-slate-100 card-hover overflow-hidden">
             <img
               src="/sizzor 5.jpeg"
               alt="Scissor Lift View 5"
@@ -92,7 +92,7 @@ export default function ScissorLift() {
             />
           </div>
 
-          <div className="bg-white rounded-2xl shadow-md p-4">
+          <div className="bg-white rounded-3xl p-2 shadow-sm border border-slate-100 card-hover overflow-hidden">
             <img
               src="/sizzor 6.jpeg"
               alt="Scissor Lift View 6"
@@ -100,7 +100,7 @@ export default function ScissorLift() {
             />
           </div>
 
-          <div className="bg-white rounded-2xl shadow-md p-4">
+          <div className="bg-white rounded-3xl p-2 shadow-sm border border-slate-100 card-hover overflow-hidden">
             <img
               src="/sizzor 7.jpeg"
               alt="Scissor Lift View 7"
@@ -114,7 +114,7 @@ export default function ScissorLift() {
         <div className="text-center">
           <Link
             to="/contact"
-            className="bg-[#F4B400] text-black px-8 py-3 rounded-md font-semibold hover:opacity-90 transition"
+            className="bg-primary text-white px-10 py-4 rounded-full font-bold shadow-xl shadow-primary/20 hover:scale-105 transition-all"
           >
             Request a Quote
           </Link>

@@ -41,13 +41,13 @@ export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <section className="py-24 bg-[#F8FAFC]">
+    <section className="py-24 bg-muted/20">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-[#0B3C5D]">
-            Our <span className="text-[#F4B400]">Gallery</span>
+          <h1 className="text-5xl font-extrabold text-primary">
+            Our <span className="text-accent underline decoration-primary/5 underline-offset-8">Gallery</span>
           </h1>
           <p className="text-gray-600 mt-4">
             Explore our equipment and project highlights across Maharashtra.
@@ -59,7 +59,7 @@ export default function Gallery() {
           {images.map((img, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-md overflow-hidden cursor-pointer group"
+              className="bg-white rounded-3xl p-2 shadow-sm border border-slate-100 card-hover cursor-pointer group"
               onClick={() => setSelectedImage(img)}
             >
               <img

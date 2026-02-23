@@ -6,48 +6,51 @@
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 220 15% 15%;
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 15% 15%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 15%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 210 70% 38%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 205 78% 21%;
+    /* Deep Professional Navy */
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 220 10% 20%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 215 25% 27%;
+    /* Slate Gray */
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 15% 93%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 45 100% 51%;
-    --accent-foreground: 220 10% 10%;
+    --accent: 45 100% 48%;
+    /* Industrial Gold */
+    --accent-foreground: 222 47% 11%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 210 15% 88%;
-    --input: 210 15% 88%;
-    --ring: 210 70% 38%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 47% 11%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
-    --sidebar-background: 220 10% 15%;
-    --sidebar-foreground: 210 20% 90%;
-    --sidebar-primary: 210 70% 45%;
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 205 78% 21%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 10% 22%;
-    --sidebar-accent-foreground: 210 20% 90%;
-    --sidebar-border: 220 10% 25%;
-    --sidebar-ring: 210 70% 45%;
+    --sidebar-accent: 215 25% 27%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 222 47% 11%;
 
     /* Custom tokens */
-    --industrial-dark: 220 15% 12%;
-    --industrial-dark-foreground: 210 20% 95%;
+    --industrial-dark: 222 47% 11%;
+    --industrial-dark-foreground: 210 40% 98%;
     --success: 142 70% 40%;
     --success-foreground: 0 0% 100%;
   }
@@ -89,7 +92,10 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image:
+      radial-gradient(at 0% 0%, hsla(210, 40%, 96%, 1) 0, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(205, 78%, 95%, 1) 0, transparent 50%);
   }
 
   html {
@@ -102,9 +108,26 @@
     @apply px-4 py-16 md:px-8 lg:px-16 lg:py-24;
   }
 
+  .bg-premium-gradient {
+    background: linear-gradient(135deg, hsl(205 78% 21%) 0%, hsl(205 78% 15%) 100%);
+  }
+
+  .glass-morphism {
+    @apply bg-white/70 backdrop-blur-lg border border-white/20;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-2xl hover:-translate-y-2;
+  }
+
   @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
   }
 
   .animate-marquee {
