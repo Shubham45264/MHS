@@ -58,7 +58,7 @@ export default function BoomLift() {
         </div>
 
         {/* Supporting Images (Product Showcase) */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mb-20">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-20">
 
           <div className="bg-white rounded-2xl shadow-md p-4">
             <img
@@ -80,6 +80,30 @@ export default function BoomLift() {
             <img
               src="/bomb lift 4.jpeg"
               alt="Boom Lift View 4"
+              className="w-full h-60 object-cover rounded-xl"
+            />
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-md p-4">
+            <img
+              src="/bomb lift 5.jpeg"
+              alt="Boom Lift View 5"
+              className="w-full h-60 object-cover rounded-xl"
+            />
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-md p-4">
+            <img
+              src="/bomb lift 6.jpeg"
+              alt="Boom Lift View 6"
+              className="w-full h-60 object-cover rounded-xl"
+            />
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-md p-4">
+            <img
+              src="/bomb lift 7.jpeg"
+              alt="Boom Lift View 7"
               className="w-full h-60 object-cover rounded-xl"
             />
           </div>

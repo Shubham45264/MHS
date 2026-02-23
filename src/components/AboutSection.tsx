@@ -67,11 +67,9 @@ export default function About() {
           </h3>
 
           <p className="text-gray-600 leading-relaxed">
-            Maharashtra Hiring Services is a leading provider of industrial
-            equipment rental, generator solutions, AMC contracts, fabrication
-            services, and heavy machinery rentals across Maharashtra.
-            We specialize in boom lifts, scissor lifts, DG sets, cranes,
-            installation & commissioning, and comprehensive maintenance services.
+            We are the best company of 24 Hour Crane, JCB, Farana, Hydra, Loading, Unloading, Shifting & work on Hire Services and Forklift Cranes on Hire Services in MUMBAI India. It is specifically due to complete understanding of the market operations and customers requirements; we are able to provide quality for services. Our services are rendered in compliance with International standards, and meeting clients drawn specifications. We make sure that we are best cranes for different purposes. All these have helped us to earn a reputed position in the marketplace.
+
+Specializing in mobile Crane hire from 20 to 500 tons in capacity all of our cranes are manned by operators who are trained to the highest standards within the industry.
           </p>
         </div>
 

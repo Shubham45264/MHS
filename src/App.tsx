@@ -14,6 +14,8 @@ import BoomLift from "./components/BoomLift";
 import ScissorLift from "./components/ScissorLift";
 import TruckMountedManLift from "./components/TruckMounted";
 import Cranes from "./components/Cranes";
+import EscortFarana from "./components/EscortFarana";
+import TRX2319 from "./components/TRX2319";
 import Gallery from "./components/Gallery"; // ✅ NEW
 
 import Contact from "./pages/Contact";
@@ -47,6 +49,8 @@ const App = () => (
               element={<TruckMountedManLift />}
             />
             <Route path="/services/cranes" element={<Cranes />} />
+            <Route path="/services/escort-farana-f15" element={<EscortFarana />} />
+            <Route path="/services/escort-trx-2319" element={<TRX2319 />} />
 
             {/* ✅ Gallery Page */}
             <Route path="/gallery" element={<Gallery />} />

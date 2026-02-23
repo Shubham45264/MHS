@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Security & Tests
+.env
+test-email.js
+test-api.js

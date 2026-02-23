@@ -5,8 +5,10 @@ import { getWhatsAppUrl, getMailtoUrl } from "@/lib/config";
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Background */}
       <div className="absolute inset-0">
         <img
@@ -14,45 +16,46 @@ export default function HeroSection() {
           alt="Industrial equipment site"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/75 to-secondary/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/85 to-secondary/70" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 pt-20 pb-12 text-center md:text-left">
-        <div className="max-w-3xl">
+      <div className="relative z-10 container mx-auto px-6 pt-24 pb-16 text-left">
+        <div className="max-w-4xl">
 
-          <p className="text-accent font-semibold text-sm md:text-base tracking-widest uppercase mb-4 animate-fade-in-up">
+          <p className="text-yellow-400 font-semibold text-sm tracking-[0.2em] uppercase mb-5">
             Maharashtra’s Trusted Industrial Equipment Partner
           </p>
 
-          <h1
-            className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-secondary-foreground leading-tight mb-6 animate-fade-in-up"
-            style={{ animationDelay: "0.1s" }}
-          >
-            Maharashtra Hiring Services
-            <br className="hidden md:block" />
-            For Industrial & Infrastructure Projects
+          <h1 className="font-display text-slate-100 leading-snug mb-6">
+
+            {/* Bigger Brand Name */}
+            <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold">
+              Maharashtra Hiring Services
+            </span>
+
+            {/* Smaller Sub Heading */}
+            <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium text-slate-300 mt-2">
+              For Industrial & Infrastructure Projects
+            </span>
+
           </h1>
 
-          <p
-            className="text-secondary-foreground/80 text-base md:text-lg mb-8 max-w-2xl animate-fade-in-up"
-            style={{ animationDelay: "0.2s" }}
-          >
-            We provide high-performance generators, boom lifts, cranes, 
-            and heavy equipment backed by AMC support, expert installation, 
+          <p className="text-slate-300 text-base md:text-lg max-w-2xl mb-10">
+            We provide high-performance generators, boom lifts, cranes,
+            and heavy equipment backed by AMC support, expert installation,
             and 24/7 service reliability across Maharashtra.
           </p>
 
-          <div
-            className="flex flex-wrap gap-3 justify-center md:justify-start animate-fade-in-up"
-            style={{ animationDelay: "0.3s" }}
-          >
-            <Link
-              to="/product-services"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity"
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="/Maharashtra hiring services brochure pdf (2).pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold hover:opacity-90 transition"
             >
-              <ArrowDown className="h-4 w-4" /> View Services
-            </Link>
+              <ArrowDown className="h-4 w-4" /> Download Brochure
+            </a>
 
             <a
               href={getWhatsAppUrl(
@@ -60,7 +63,7 @@ export default function HeroSection() {
               )}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-success text-success-foreground px-6 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-green-700 transition"
             >
               <MessageCircle className="h-4 w-4" /> WhatsApp Enquiry
             </a>
@@ -70,7 +73,7 @@ export default function HeroSection() {
                 "General Enquiry",
                 "Hello, I would like to enquire about your services."
               )}
-              className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 bg-amber-500 text-white px-6 py-3 rounded-md font-semibold hover:bg-amber-600 transition"
             >
               <Mail className="h-4 w-4" /> Email Us
             </a>

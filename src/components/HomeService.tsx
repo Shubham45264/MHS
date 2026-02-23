@@ -1,23 +1,20 @@
 import { Link } from "react-router-dom";
 
-const services = [
+const allServices = [
   {
     title: "Boom Lift",
-    description:
-      "Boom Lifts, Scissor Lifts, Diesel Generators, Light Towers, RECD & Dual Fuel Kits, and Manufacturing of Canopy DG Sets.",
     image: "/bomb-lift.jpeg",
+    description: "High-reach boom lifts designed for safe and efficient elevated operations."
   },
   {
     title: "Scissor Lift",
-    description:
-      "AMC of Generators, Installation & Commissioning, DG Stack Fabrication, Canopy Repairs, Painting & Structural Work.",
-    image: "/Scissor.jpeg",
+    image: "/Scissor-Lift.jpeg",
+    description: "Stable vertical lifting platforms ideal for warehouse and facility maintenance."
   },
   {
-    title: "Truck Mounted ManLift",
-    description:
-      "Boom Lifts, Scissor Lifts, Truck Mounted Lifts, Cranes, Hydra, Compressor, DG Set & Lighting Towers on Rent.",
+    title: "Truck Mounted BoomLift",
     image: "/Mounted-Boom-Lift.jpeg",
+    description: "Mobile truck-mounted equipment for utility and on-site maintenance."
   },
 ];
 
@@ -31,6 +28,7 @@ export default function HomeServices() {
           <h3 className="text-3xl md:text-4xl font-bold text-[#0B3C5D]">
             Services <span className="text-[#F4B400]">We Offer</span>
           </h3>
+          <div className="w-20 h-1.5 bg-[#F4B400] mx-auto mt-4 rounded-full"></div>
 
           <Link
             to="/services"
@@ -42,10 +40,10 @@ export default function HomeServices() {
 
         {/* Services Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {allServices.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-sm hover:shadow-2xl hover:-translate-y-3 transition-all duration-300 overflow-hidden"
+              className="bg-white rounded-2xl shadow-sm hover:shadow-2xl hover:-translate-y-3 transition-all duration-300 overflow-hidden group"
             >
               {/* Image */}
               <div className="h-60 bg-white flex items-center justify-center p-6">

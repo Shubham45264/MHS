@@ -10,6 +10,7 @@ export default function Gallery() {
     "/bomb lift 5.jpeg",
     "/bomb lift 6.jpeg",
     "/bomb lift 7.jpeg",
+    "/Mounted-Boom-Lift.jpeg",
 
     // 🔷 Scissor Lift
     "/Sizzor 1.jpeg",
@@ -17,7 +18,24 @@ export default function Gallery() {
     "/sizzor 3.jpeg",
     "/Sizzor 4.jpeg",
     "/sizzor 5.jpeg",
+    "/sizzor 6.jpeg",
     "/sizzor 7.jpeg",
+
+    // 🏗️ Cranes & TRX
+    "/cranes 1.jpeg",
+    "/cranes 2.jpeg",
+    "/cranes 3.jpeg",
+    "/cranes 4.jpeg",
+    "/trx 1.jpeg",
+    "/trx 2.jpeg",
+    "/trx 3.jpeg",
+    "/trx 4.jpeg",
+    "/trx 5.jpeg",
+
+    // 🚜 Escort Farana Highlights
+    "/ESCORTS_Farana_F15_1_a3abd07c78.webp",
+    "/large_ESCORTS_Farana_F15_4_bca9b1a1f1.webp",
+    "/small_ESCORTS_Farana_F15_8003f64ec7.webp",
   ];
 
   const [selectedImage, setSelectedImage] = useState<string | null>(null);

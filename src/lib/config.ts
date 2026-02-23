@@ -3,7 +3,7 @@
 // ===============================
 
 export const CONTACT = {
-  phone: "919820996758",
+  phone: "9820996758",
   phoneDisplay: "+91 9820996758",
 
   email: "maharashtrahiringservices@gmail.com",

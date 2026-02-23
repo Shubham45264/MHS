@@ -49,9 +49,7 @@ export default function WhyChooseUs() {
           </h2>
 
           <p className="mt-5 text-gray-600 max-w-3xl mx-auto text-sm md:text-base leading-relaxed">
-            We deliver reliable industrial equipment rental and generator solutions
-            with professionalism, safety, and efficiency. Our commitment is to
-            support your projects with quality equipment and dependable service.
+           We can now proudly boast to have worked with the best in the industry and having the opportunity to have catered to various industries.
           </p>
         </div>
 
