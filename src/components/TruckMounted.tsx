@@ -8,11 +8,11 @@ export default function TruckMountedManLift() {
         {/* Heading */}
         <div className="mb-12">
           <h1 className="text-4xl font-bold text-[#0B3C5D] mb-4">
-            Truck Mounted <span className="text-[#F4B400]">Man Lift</span>
+            Truck Mounted <span className="text-[#F4B400]">Boom Lift</span>
           </h1>
 
           <p className="text-gray-600 text-lg leading-relaxed max-w-3xl">
-            Our Truck Mounted Man Lift provides mobile and flexible elevated
+            Our Truck Mounted Boom Lift provides mobile and flexible elevated
             access solutions for infrastructure, telecom, street lighting,
             and industrial maintenance projects. Designed for quick deployment
             and reliable performance on-site.
@@ -26,7 +26,7 @@ export default function TruckMountedManLift() {
           <div className="bg-white rounded-3xl shadow-lg p-8 flex justify-center">
             <img
               src="/Mounted-Boom-Lift.jpeg"
-              alt="Truck Mounted Man Lift"
+              alt="Truck Mounted Boom Lift"
               className="max-h-96 object-contain"
             />
           </div>

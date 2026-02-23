@@ -15,7 +15,7 @@ const quickLinks = [
 const serviceLinks = [
   { label: "Diesel Boom Lift 17-18 m", to: "/product-services" },
   { label: "Scissor Lift", to: "/product-services" },
-  { label: "Truck Mounted Man Lift", to: "/TruckMounted" },
+  { label: "Truck Mounted Boom Lift", to: "/TruckMounted" },
   { label: "Cranes", to: "/Cranes" },
 ];
 
