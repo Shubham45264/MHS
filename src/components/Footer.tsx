@@ -8,14 +8,14 @@ const quickLinks = [
   // { label: "Product Services", to: "/product-services" },
   // { label: "Industrial Services", to: "/industrial-services" },
   // { label: "Rental Services", to: "/rental-services" },
-  {label:"Services", to:"/Services"},
+  { label: "Services", to: "/Services" },
   { label: "Contact", to: "/contact" },
 ];
 
 const serviceLinks = [
-  { label: "Boom Lift", to: "/product-services" },
+  { label: "Diesel Boom Lift 17-18 m", to: "/product-services" },
   { label: "Scissor Lift", to: "/product-services" },
-  { label: "Truck Mounted ManLift", to: "/TruckMounted" },
+  { label: "Truck Mounted Man Lift", to: "/TruckMounted" },
   { label: "Cranes", to: "/Cranes" },
 ];
 

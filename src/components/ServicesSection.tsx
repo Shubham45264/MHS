@@ -6,7 +6,7 @@ import {
 import ServiceCard from "./ServiceCard";
 
 const productServices = [
-  { icon: ArrowUpFromLine, title: "Boom Lift", description: "High-reach boom lifts for elevated work platforms at construction and industrial sites." },
+  { icon: ArrowUpFromLine, title: "Diesel Boom Lift 17-18 m", description: "High-reach diesel boom lifts for elevated work platforms at construction and industrial sites." },
   { icon: Scissors, title: "Scissor Lift", description: "Stable vertical lifting platforms for maintenance, installation, and warehouse operations." },
   { icon: Zap, title: "Diesel Generators", description: "Reliable diesel generator sets for continuous and standby power supply." },
   { icon: Sun, title: "Light Towers", description: "Portable light tower solutions for night-time construction and event illumination." },
@@ -24,7 +24,7 @@ const industrialServices = [
 ];
 
 const rentalServices = [
-  { icon: ArrowUpFromLine, title: "Boom Lift (Electric & Diesel)", description: "Electric and diesel-powered boom lifts available on daily, weekly, and monthly rental." },
+  { icon: ArrowUpFromLine, title: "Diesel Boom Lift 17-18 m", description: "Diesel-powered boom lifts available on daily, weekly, and monthly rental." },
   { icon: Scissors, title: "Scissor Lift", description: "Compact scissor lifts for indoor and outdoor elevated access on rent." },
   { icon: Truck, title: "Truck Mounted Boom Lift", description: "Vehicle-mounted aerial platforms for roadside and utility maintenance." },
   { icon: Container, title: "Mobile & Crawler Cranes", description: "Heavy-duty mobile and crawler cranes for lifting and material handling." },

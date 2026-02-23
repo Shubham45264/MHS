@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function Gallery() {
   const images = [
-    // 🔶 Boom Lift
+    // 🔶 Diesel Boom Lift 17-18 m
     "/bomb lift 1.jpeg",
     "/bomb lift 2.jpeg",
     "/bomb lift 3.jpeg",

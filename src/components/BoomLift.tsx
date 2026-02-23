@@ -8,10 +8,10 @@ export default function BoomLift() {
         {/* Heading */}
         <div className="mb-14">
           <h1 className="text-4xl font-bold text-[#0B3C5D] mb-4">
-            Boom <span className="text-[#F4B400]">Lift</span>
+            Diesel Boom <span className="text-[#F4B400]">Lift 17-18 m</span>
           </h1>
           <p className="text-gray-600 text-lg leading-relaxed max-w-3xl">
-            Our Boom Lifts are designed to provide safe and reliable elevated
+            Our Diesel Boom Lifts 17-18 m are designed to provide safe and reliable elevated
             access solutions for construction, infrastructure, and industrial
             projects. Built with advanced engineering and safety standards,
             they ensure smooth performance even in demanding environments.
@@ -25,7 +25,7 @@ export default function BoomLift() {
           <div className="bg-white rounded-3xl shadow-lg p-6">
             <img
               src="/bomb lift 1.jpeg"
-              alt="Boom Lift"
+              alt="Diesel Boom Lift 17-18 m"
               className="w-full h-[350px] object-contain"
             />
           </div>
@@ -33,18 +33,18 @@ export default function BoomLift() {
           {/* Detailed Info */}
           <div>
             <h2 className="text-2xl font-semibold text-[#0B3C5D] mb-6">
-              Why Choose Our Boom Lift?
+              Why Choose Our Diesel Boom Lift 17-18 m?
             </h2>
 
             <p className="text-gray-700 mb-4">
               Our equipment is maintained regularly to ensure maximum safety
-              and performance. Boom lifts are ideal for tasks requiring high
+              and performance. Diesel boom lifts are ideal for tasks requiring high
               reach and flexibility, including building maintenance, electrical
               installations, painting, and structural work.
             </p>
 
             <p className="text-gray-700 mb-4">
-              With smooth maneuverability and strong stability, our boom lifts
+              With smooth maneuverability and strong stability, our diesel boom lifts
               help teams complete elevated tasks efficiently while maintaining
               high safety standards.
             </p>
@@ -63,7 +63,7 @@ export default function BoomLift() {
           <div className="bg-white rounded-2xl shadow-md p-4">
             <img
               src="/bomb lift 2.jpeg"
-              alt="Boom Lift View 2"
+              alt="Diesel Boom Lift 17-18 m View 2"
               className="w-full h-60 object-cover rounded-xl"
             />
           </div>
@@ -71,7 +71,7 @@ export default function BoomLift() {
           <div className="bg-white rounded-2xl shadow-md p-4">
             <img
               src="/bomb lift 3.jpeg"
-              alt="Boom Lift View 3"
+              alt="Diesel Boom Lift 17-18 m View 3"
               className="w-full h-60 object-cover rounded-xl"
             />
           </div>
@@ -79,7 +79,7 @@ export default function BoomLift() {
           <div className="bg-white rounded-2xl shadow-md p-4">
             <img
               src="/bomb lift 4.jpeg"
-              alt="Boom Lift View 4"
+              alt="Diesel Boom Lift 17-18 m View 4"
               className="w-full h-60 object-cover rounded-xl"
             />
           </div>
@@ -87,7 +87,7 @@ export default function BoomLift() {
           <div className="bg-white rounded-2xl shadow-md p-4">
             <img
               src="/bomb lift 5.jpeg"
-              alt="Boom Lift View 5"
+              alt="Diesel Boom Lift 17-18 m View 5"
               className="w-full h-60 object-cover rounded-xl"
             />
           </div>
@@ -95,7 +95,7 @@ export default function BoomLift() {
           <div className="bg-white rounded-2xl shadow-md p-4">
             <img
               src="/bomb lift 6.jpeg"
-              alt="Boom Lift View 6"
+              alt="Diesel Boom Lift 17-18 m View 6"
               className="w-full h-60 object-cover rounded-xl"
             />
           </div>
@@ -103,7 +103,7 @@ export default function BoomLift() {
           <div className="bg-white rounded-2xl shadow-md p-4">
             <img
               src="/bomb lift 7.jpeg"
-              alt="Boom Lift View 7"
+              alt="Diesel Boom Lift 17-18 m View 7"
               className="w-full h-60 object-cover rounded-xl"
             />
           </div>

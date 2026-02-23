@@ -42,7 +42,7 @@ export default function HeroSection() {
           </h1>
 
           <p className="text-slate-300 text-base md:text-lg max-w-2xl mb-10">
-            We provide high-performance generators, boom lifts, cranes,
+            We provide high-performance generators, diesel boom lifts 17-18 m, cranes,
             and heavy equipment backed by AMC support, expert installation,
             and 24/7 service reliability across Maharashtra.
           </p>

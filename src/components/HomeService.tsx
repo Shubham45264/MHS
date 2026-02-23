@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const allServices = [
   {
-    title: "Boom Lift",
+    title: "Diesel Boom Lift 17-18 m",
     image: "/bomb-lift.jpeg",
-    description: "High-reach boom lifts designed for safe and efficient elevated operations."
+    description: "High-reach diesel boom lifts designed for safe and efficient elevated operations."
   },
   {
     title: "Scissor Lift",
@@ -12,7 +12,7 @@ const allServices = [
     description: "Stable vertical lifting platforms ideal for warehouse and facility maintenance."
   },
   {
-    title: "Truck Mounted BoomLift",
+    title: "Truck Mounted Boom Lift",
     image: "/Mounted-Boom-Lift.jpeg",
     description: "Mobile truck-mounted equipment for utility and on-site maintenance."
   },

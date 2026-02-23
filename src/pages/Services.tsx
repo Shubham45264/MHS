@@ -6,10 +6,10 @@ import {
 
 const services = [
   {
-    title: "Boom Lift",
+    title: "Diesel Boom Lift 17-18 m",
     image: "/bomb-lift.jpeg",
     description:
-      "High-reach boom lifts designed for safe and efficient elevated operations at construction, industrial, and infrastructure project sites.",
+      "High-reach diesel boom lifts designed for safe and efficient elevated operations at construction, industrial, and infrastructure project sites.",
     link: "/services/boom-lift",
   },
   {
@@ -20,7 +20,7 @@ const services = [
     link: "/services/scissor-lift",
   },
   {
-    title: "Truck Mounted BoomLift",
+    title: "Truck Mounted Boom Lift",
     image: "/Mounted-Boom-Lift.jpeg",
     description:
       "Mobile truck-mounted lifting equipment suitable for street lighting, telecom work, utility services, and on-site maintenance projects.",
