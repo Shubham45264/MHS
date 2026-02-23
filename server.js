@@ -16,23 +16,6 @@ const app = express();
 app.use(express.json({ limit: '10mb' }));
 app.use(cors());
 
-// Health check
-app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'ok' });
-});
-
-// Serve static files from the React app
-app.use(express.static(join(__dirname, 'dist')));
-
-// API routes here... (enquiry and review)
-
-// Catch-all route to serve the React app for any non-API routes
-app.get('/*', (req, res) => {
-  if (!req.path.startsWith('/api')) {
-    res.sendFile(join(__dirname, 'dist', 'index.html'));
-  }
-});
-
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   host: 'smtp.gmail.com',
@@ -53,6 +36,12 @@ transporter.verify((error, success) => {
   }
 });
 
+// Health check
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok' });
+});
+
+// API Routes
 app.post('/api/enquiry', async (req, res) => {
   const { name, email, phone, message } = req.body;
 
@@ -127,6 +116,15 @@ app.post('/api/review', async (req, res) => {
     console.error('Error sending review email:', error);
     res.status(500).json({ success: false, message: 'Failed to send review. Please try again later.' });
   }
+});
+
+// Serve static files from the React app
+app.use(express.static(join(__dirname, 'dist')));
+
+// Catch-all route to serve the React app for any non-API routes 
+// Using regex for maximum compatibility with Express 5
+app.get(/^(?!\/api).*/, (req, res) => {
+  res.sendFile(join(__dirname, 'dist', 'index.html'));
 });
 
 const PORT = process.env.PORT || 5000;
