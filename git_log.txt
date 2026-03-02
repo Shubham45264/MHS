@@ -1,0 +1,22 @@
+﻿*   4dfc551 Resolved merge
+|\  
+| * cd92739 Update vercel.json
+| * ff91a7a Update vercel.json
+| * 0b9be12 Update ContactSection.tsx
+| * b71d38c Update server.js
+* | db5fa8d Initial commit
+|/  
+* 0b20443 chore: update environment variables
+* 74f0f37 Rename Truck Mounted Man Lift to Truck Mounted Boom Lift in footer and detail page
+* 24b1a47 Rename Boom Lift to Diesel Boom Lift 17-18 m and fix spacing
+* 0490dbb feat: add vercel.json for Vercel deployment support
+* e609507 fix: use regex for catch-all route to resolve Express 5 PathError
+* d5f9b41 fix: update catch-all route syntax for Express 5 compatibility
+* 74539d3 fix: prepare project for production deployment
+* eb1f1b8 feat: implement enquiry and review email functionality with Express and Nodemailer
+* 83ab404 Initial project upload
+* 7184f34 Update FloatingWhatsApp.tsx
+* c05434e Update config.ts
+* e074ea9 Add contact details and utility functions
+* 6323f2d Refactor contact details in config.ts
+* 7b0485a Update config.ts

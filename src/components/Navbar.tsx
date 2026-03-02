@@ -93,10 +93,10 @@ export default function Navbar() {
                   key={l.to}
                   to={l.to}
                   className={`text-sm font-semibold tracking-wide transition-all duration-300 relative group ${location.pathname === l.to
-                      ? "text-accent"
-                      : scrolled || !isHome
-                        ? "text-slate-700 hover:text-primary"
-                        : "text-white hover:text-accent"
+                    ? "text-accent"
+                    : scrolled || !isHome
+                      ? "text-slate-700 hover:text-primary"
+                      : "text-white hover:text-accent"
                     }`}
                 >
                   {l.label}
@@ -109,10 +109,7 @@ export default function Navbar() {
             <div className="hidden md:flex">
               <a
                 href={`tel:${CONTACT.phone}`}
-                className={`inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold shadow-lg transition-transform hover:scale-105 active:scale-95 ${scrolled || !isHome
-                    ? "bg-primary text-white"
-                    : "bg-accent text-primary"
-                  }`}
+                className={`inline-flex items-center gap-2 px-6 py-2 rounded-full text-sm font-bold shadow-lg transition-all hover:scale-105 active:scale-95 bg-[#0B3C5D] text-white`}
               >
                 <Phone className="h-4 w-4" /> Call Now
               </a>

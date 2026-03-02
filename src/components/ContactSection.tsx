@@ -97,7 +97,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="py-28 bg-muted/20">
+    <section className="py-28 bg-background">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* HEADER */}
@@ -114,7 +114,7 @@ export default function ContactSection() {
         </div>
 
         {/* CONTACT GRID */}
-        <div className="grid lg:grid-cols-2 gap-16 items-start mb-28">
+        <div className="grid lg:grid-cols-2 gap-12 items-start mb-28">
 
           {/* LEFT SIDE */}
           <div className="space-y-8">
@@ -122,44 +122,50 @@ export default function ContactSection() {
             <div className="grid sm:grid-cols-2 gap-6">
 
               {/* Contact Card */}
-              <div className="bg-white p-8 rounded-[2rem] shadow-xl border border-gray-50">
-                <h3 className="text-xl font-bold text-[#0B3C5D] mb-6 flex items-center gap-2">
-                  <span className="w-8 h-8 bg-[#F4B400]/10 rounded-lg flex items-center justify-center">
-                    <Phone className="w-4 h-4 text-[#F4B400]" />
-                  </span>
-                  Contact Info
-                </h3>
+              <div className="bg-white p-8 rounded-[2.5rem] shadow-xl border border-gray-50 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-xl font-bold text-primary mb-6 flex items-center gap-3">
+                    <span className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center">
+                      <Phone className="w-5 h-5 text-accent" />
+                    </span>
+                    Contact Info
+                  </h3>
 
-                <div className="space-y-4 text-gray-600">
-                  <div>
-                    <span className="text-xs uppercase font-bold text-gray-400">Phone</span>
-                    <span className="font-semibold text-[#0B3C5D]">{CONTACT.phoneDisplay}</span>
-                  </div>
+                  <div className="space-y-5 text-gray-600">
+                    <div>
+                      <span className="text-[10px] uppercase font-black text-gray-400 tracking-widest block mb-1">Phone</span>
+                      <a href={`tel:${CONTACT.phone}`} className="font-bold text-primary hover:text-accent transition-colors text-lg">
+                        {CONTACT.phoneDisplay}
+                      </a>
+                    </div>
 
-                  <div>
-                    <span className="text-xs uppercase font-bold text-gray-400">Email</span>
-                    <span className="font-semibold text-[#0B3C5D] break-all">{CONTACT.email}</span>
+                    <div>
+                      <span className="text-[10px] uppercase font-black text-gray-400 tracking-widest block mb-1">Email</span>
+                      <a href={`mailto:${CONTACT.email}`} className="font-bold text-primary hover:text-accent transition-colors break-all text-sm">
+                        {CONTACT.email}
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
 
               {/* Hours Card */}
-              <div className="bg-white p-8 rounded-[2rem] shadow-xl border border-gray-50 hover:shadow-2xl transition-all duration-500">
-                <h3 className="text-xl font-bold text-[#0B3C5D] mb-6 flex items-center gap-2">
-                  <span className="w-8 h-8 bg-[#F4B400]/10 rounded-lg flex items-center justify-center">
-                    <Clock className="w-4 h-4 text-[#F4B400]" />
+              <div className="bg-white p-8 rounded-[2.5rem] shadow-xl border border-gray-50 hover:shadow-2xl transition-all duration-500">
+                <h3 className="text-xl font-bold text-primary mb-6 flex items-center gap-3">
+                  <span className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center">
+                    <Clock className="w-5 h-5 text-accent" />
                   </span>
                   Office Hours
                 </h3>
 
-                <div className="space-y-4 text-gray-600">
+                <div className="space-y-5 text-gray-600">
                   <div>
-                    <span className="text-xs uppercase font-bold text-gray-400">Mon - Sat</span>
-                    <span className="font-semibold text-[#0B3C5D]">10:00 AM - 07:00 PM</span>
+                    <span className="text-[10px] uppercase font-black text-gray-400 tracking-widest block mb-1">Mon - Sat</span>
+                    <span className="font-bold text-primary text-lg">10:00 AM - 07:00 PM</span>
                   </div>
                   <div>
-                    <span className="text-xs uppercase font-bold text-gray-400">Sunday</span>
-                    <div className="font-semibold text-red-500">
+                    <span className="text-[10px] uppercase font-black text-gray-400 tracking-widest block mb-1">Sunday</span>
+                    <div className="font-bold text-red-500 text-lg">
                       Closed
                     </div>
                   </div>
@@ -168,20 +174,20 @@ export default function ContactSection() {
             </div>
 
             {/* Address Card */}
-            <div className="bg-white p-8 rounded-[2rem] shadow-xl border border-gray-100 italic transition-all duration-500">
-              <h3 className="text-xl font-bold text-[#0B3C5D] mb-4 flex items-center gap-2 not-italic">
-                <span className="w-8 h-8 bg-[#F4B400]/10 rounded-lg flex items-center justify-center">
-                  <MapPin className="w-4 h-4 text-[#F4B400]" />
+            <div className="bg-white p-8 rounded-[2.5rem] shadow-xl border border-gray-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-primary mb-4 flex items-center gap-3">
+                <span className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center">
+                  <MapPin className="w-5 h-5 text-accent" />
                 </span>
                 Our Location
               </h3>
-              <p className="text-gray-600 leading-relaxed font-medium">
+              <p className="text-gray-600 leading-relaxed font-semibold text-lg">
                 {CONTACT.address}
               </p>
             </div>
 
             {/* MAP */}
-            <div className="rounded-[2.5rem] overflow-hidden shadow-2xl h-80 border-4 border-white">
+            <div className="rounded-[2.5rem] overflow-hidden shadow-2xl h-80 border-8 border-white">
               <iframe
                 src={CONTACT.mapEmbedUrl}
                 width="100%"
@@ -199,7 +205,7 @@ export default function ContactSection() {
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#F4B400] opacity-5 -mr-16 -mt-16 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
 
             <div className="relative">
-              <h3 className="text-3xl font-bold text-[#0B3C5D] mb-2">
+              <h3 className="text-3xl font-bold text-primary mb-2">
                 Send an Enquiry
               </h3>
               <p className="text-gray-500 mb-10">We usually respond within 2 business hours.</p>
@@ -214,50 +220,50 @@ export default function ContactSection() {
                       placeholder="John Doe"
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
-                      className="w-full bg-gray-50 border border-transparent rounded-2xl px-5 py-4 focus:bg-white focus:border-[#F4B400] focus:ring-4 focus:ring-[#F4B400]/10 outline-none transition-all"
+                      className="w-full bg-gray-50 border border-transparent rounded-2xl px-5 py-4 focus:bg-white focus:border-accent focus:ring-4 focus:ring-accent/10 outline-none transition-all"
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-[#0B3C5D] ml-1">Phone Number</label>
+                    <label className="text-sm font-bold text-primary ml-1">Phone Number</label>
                     <input
                       type="tel"
                       required
                       placeholder="+91 XXXX-XXXXXX"
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                      className="w-full bg-gray-50 border border-transparent rounded-2xl px-5 py-4 focus:bg-white focus:border-[#F4B400] focus:ring-4 focus:ring-[#F4B400]/10 outline-none transition-all"
+                      className="w-full bg-gray-50 border border-transparent rounded-2xl px-5 py-4 focus:bg-white focus:border-accent focus:ring-4 focus:ring-accent/10 outline-none transition-all"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-[#0B3C5D] ml-1">Email Address</label>
+                  <label className="text-sm font-bold text-primary ml-1">Email Address</label>
                   <input
                     type="email"
                     required
                     placeholder="john@example.com"
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    className="w-full bg-gray-50 border border-transparent rounded-2xl px-5 py-4 focus:bg-white focus:border-[#F4B400] focus:ring-4 focus:ring-[#F4B400]/10 outline-none transition-all"
+                    className="w-full bg-gray-50 border border-transparent rounded-2xl px-5 py-4 focus:bg-white focus:border-accent focus:ring-4 focus:ring-accent/10 outline-none transition-all"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-[#0B3C5D] ml-1">Message / Requirements</label>
+                  <label className="text-sm font-bold text-primary ml-1">Message / Requirements</label>
                   <textarea
                     rows={4}
                     required
                     placeholder="Describe your project needs..."
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    className="w-full bg-gray-50 border border-transparent rounded-2xl px-5 py-4 focus:bg-white focus:border-[#F4B400] focus:ring-4 focus:ring-[#F4B400]/10 outline-none resize-none transition-all"
+                    className="w-full bg-gray-50 border border-transparent rounded-2xl px-5 py-4 focus:bg-white focus:border-accent focus:ring-4 focus:ring-accent/10 outline-none resize-none transition-all"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-[#0B3C5D] text-white py-5 rounded-2xl font-bold text-lg hover:bg-[#F4B400] hover:text-black shadow-xl shadow-[#0B3C5D]/10 hover:shadow-[#F4B400]/20 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:transform-none"
+                  className="w-full bg-primary text-white py-5 rounded-2xl font-bold text-lg hover:bg-accent hover:text-primary shadow-xl shadow-primary/10 hover:shadow-accent/20 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:transform-none"
                 >
                   {loading ? (
                     <>
@@ -274,84 +280,76 @@ export default function ContactSection() {
         </div>
 
         {/* ================= REVIEW SECTION ================= */}
-        <div className="max-w-3xl mx-auto">
-          <div className="bg-white p-10 rounded-3xl shadow-xl text-center">
-            <h3 className="text-3xl font-bold text-[#0B3C5D] mb-6">
-              Leave a Review
-            </h3>
-            <p className="text-gray-500 mb-10">
-              We usually respond within 2 business hours.
-            </p>
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white p-12 rounded-[3.5rem] shadow-2xl border border-gray-50 text-center relative overflow-hidden group">
+            {/* Decoration */}
+            <div className="absolute top-0 left-0 w-32 h-32 bg-accent/5 -ml-16 -mt-16 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="relative">
+              <h3 className="text-3xl font-bold text-primary mb-2">
+                Leave a Review
+              </h3>
+              <p className="text-gray-500 mb-10">We value your feedback and experience with our services.</p>
 
-              <input
-                type="text"
-                required
-                placeholder="Full Name"
-                value={form.name}
-                onChange={(e) =>
-                  setForm({ ...form, name: e.target.value })
-                }
-                className="w-full bg-gray-50 rounded-2xl px-5 py-4 focus:ring-2 focus:ring-[#F4B400] outline-none"
-              />
+              <form onSubmit={handleReviewSubmit} className="space-y-6">
+                <div className="grid sm:grid-cols-2 gap-6 text-left">
+                  <div className="space-y-2">
+                    <label className="text-sm font-bold text-primary ml-1">Full Name</label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="John Doe"
+                      value={review.name}
+                      onChange={(e) => setReview({ ...review, name: e.target.value })}
+                      className="w-full bg-gray-50 border border-transparent rounded-[1.5rem] px-6 py-4 focus:bg-white focus:border-accent focus:ring-4 focus:ring-accent/10 outline-none transition-all"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-bold text-primary ml-1">Overall Rating</label>
+                    <div className="flex items-center gap-4 h-[60px] px-6 bg-gray-50 rounded-[1.5rem] border border-transparent">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star
+                          key={star}
+                          onClick={() => setReview({ ...review, rating: star })}
+                          className={`h-7 w-7 cursor-pointer transition-all duration-300 transform ${review.rating >= star
+                              ? "text-accent fill-accent scale-110"
+                              : "text-gray-300 hover:text-accent/50 hover:scale-105"
+                            }`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
 
-              <input
-                type="tel"
-                required
-                placeholder="Phone Number"
-                value={form.phone}
-                onChange={(e) =>
-                  setForm({ ...form, phone: e.target.value })
-                }
-                className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#F4B400] outline-none"
-              />
-
-              {/* STAR RATING */}
-              <div className="flex justify-center gap-3">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star
-                    key={star}
-                    onClick={() =>
-                      setReview({ ...review, rating: star })
-                    }
-                    className={`h-7 w-7 cursor-pointer transition ${review.rating >= star
-                      ? "text-[#F4B400] fill-[#F4B400]"
-                      : "text-gray-300"
-                      }`}
+                <div className="space-y-2 text-left">
+                  <label className="text-sm font-bold text-primary ml-1">Your Feedback</label>
+                  <textarea
+                    rows={4}
+                    required
+                    placeholder="Tell us about your experience..."
+                    value={review.comment}
+                    onChange={(e) => setReview({ ...review, comment: e.target.value })}
+                    className="w-full bg-gray-50 border border-transparent rounded-[1.5rem] px-6 py-4 focus:bg-white focus:border-accent focus:ring-4 focus:ring-accent/10 outline-none resize-none transition-all"
                   />
-                ))}
-              </div>
+                </div>
 
-              <textarea
-                rows={4}
-                required
-                placeholder="Your Message"
-                value={form.message}
-                onChange={(e) =>
-                  setForm({ ...form, message: e.target.value })
-                }
-                className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#F4B400] outline-none resize-none"
-              />
-
-              <button
-                type="submit"
-                disabled={reviewLoading}
-                className="w-full bg-[#F4B400] text-black py-4 rounded-xl font-bold hover:opacity-90 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
-              >
-                {loading ? (
-                  <>
-                    <Loader2 className="w-5 h-5 animate-spin" />
-                    Sending...
-                  </>
-                ) : (
-                  "Submit Enquiry"
-                )}
-              </button>
-
-            </form>
+                <button
+                  type="submit"
+                  disabled={reviewLoading}
+                  className="w-full bg-accent text-primary-foreground py-5 rounded-[1.5rem] font-black text-lg hover:shadow-2xl hover:shadow-accent/40 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed"
+                >
+                  {reviewLoading ? (
+                    <>
+                      <Loader2 className="w-5 h-5 animate-spin" />
+                      SUBMITTING...
+                    </>
+                  ) : (
+                    "SUBMIT REVIEW"
+                  )}
+                </button>
+              </form>
+            </div>
           </div>
-
         </div>
       </div>
     </section>

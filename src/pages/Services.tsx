@@ -6,7 +6,7 @@ import {
 
 const services = [
   {
-    title: "Diesel Boom Lift 17-18 m",
+    title: "Diesel Boom Lift",
     image: "/bomb-lift.jpeg",
     description:
       "High-reach diesel boom lifts designed for safe and efficient elevated operations at construction, industrial, and infrastructure project sites.",

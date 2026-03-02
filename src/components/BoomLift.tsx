@@ -8,10 +8,10 @@ export default function BoomLift() {
         {/* Heading */}
         <div className="mb-14">
           <h1 className="text-5xl font-extrabold text-primary mb-6">
-            Diesel Boom <span className="text-accent underline decoration-primary/10 underline-offset-8">Lift 17-18 m</span>
+            Diesel Boom <span className="text-accent underline decoration-primary/10 underline-offset-8">Lift</span>
           </h1>
           <p className="text-gray-600 text-lg leading-relaxed max-w-3xl">
-            Our Diesel Boom Lifts 17-18 m are designed to provide safe and reliable elevated
+            Our Diesel Boom Lifts are designed to provide safe and reliable elevated
             access solutions for construction, infrastructure, and industrial
             projects. Built with advanced engineering and safety standards,
             they ensure smooth performance even in demanding environments.
@@ -32,7 +32,7 @@ export default function BoomLift() {
 
           {/* Detailed Info */}
           <h2 className="text-3xl font-bold text-primary mb-6">
-            Why Choose Our Diesel Boom Lift 17-18 m?
+            Why Choose Our Diesel Boom Lift?
           </h2>
 
           <p className="text-gray-700 mb-4">

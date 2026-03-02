@@ -13,7 +13,7 @@ const quickLinks = [
 ];
 
 const serviceLinks = [
-  { label: "Diesel Boom Lift 17-18 m", to: "/services/boom-lift" },
+  { label: "Diesel Boom Lift", to: "/services/boom-lift" },
   { label: "Scissor Lift", to: "/services/scissor-lift" },
   { label: "Truck Mounted Boom Lift", to: "/services/truck-mounted-manlift" },
   { label: "Cranes", to: "/services/cranes" },
@@ -21,42 +21,43 @@ const serviceLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-premium-gradient text-white pt-20 pb-10">
+    <footer className="bg-[#0B3C5D] text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* ================= MAIN GRID ================= */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
           {/* 🔹 Brand Section */}
-          <div>
-            <div className="flex items-center gap-3 mb-4">
+          <div className="space-y-6">
+            <div className="flex items-center gap-4">
               <img
-                src="/Logo.png"
+                src="/MHS_logo_clean_transparent.png"
                 alt="MHS Logo"
-                className="h-12 w-auto object-contain"
+                className="h-10 w-auto object-contain"
               />
-              <h3 className="font-bold text-lg">
-                {CONTACT.companyName}
-              </h3>
+              <div className="flex flex-col">
+                <span className="font-bold text-xl leading-tight">Maharashtra Hiring</span>
+                <span className="font-bold text-xl leading-tight text-white">Services</span>
+              </div>
             </div>
 
-            <p className="text-white/70 text-sm leading-relaxed">
-              Your trusted partner for industrial equipment rental,
-              generator services, and maintenance solutions across Maharashtra.
+            <p className="text-gray-300 text-sm leading-relaxed max-w-xs">
+              Your trusted partner for industrial equipment rental, generator services, and
+              maintenance solutions across Maharashtra.
             </p>
           </div>
 
           {/* 🔹 Quick Links */}
-          <div>
-            <h4 className="font-semibold text-sm uppercase tracking-wider text-accent flex-shrink-0">
-              Quick Links
+          <div className="lg:pl-8">
+            <h4 className="font-bold text-sm uppercase tracking-wider text-[#F4B400] mb-8">
+              QUICK LINKS
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {quickLinks.map((l) => (
                 <li key={l.to}>
                   <Link
                     to={l.to}
-                    className="text-sm text-white/70 hover:text-accent transition-colors"
+                    className="text-sm text-gray-300 hover:text-[#F4B400] transition-colors"
                   >
                     {l.label}
                   </Link>
@@ -67,15 +68,15 @@ export default function Footer() {
 
           {/* 🔹 Services */}
           <div>
-            <h4 className="font-semibold text-sm uppercase tracking-wider text-accent flex-shrink-0">
-              Our Services
+            <h4 className="font-bold text-sm uppercase tracking-wider text-[#F4B400] mb-8">
+              OUR SERVICES
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {serviceLinks.map((s) => (
                 <li key={s.label}>
                   <Link
                     to={s.to}
-                    className="text-sm text-white/70 hover:text-accent transition-colors"
+                    className="text-sm text-gray-300 hover:text-[#F4B400] transition-colors"
                   >
                     {s.label}
                   </Link>
@@ -86,77 +87,57 @@ export default function Footer() {
 
           {/* 🔹 Contact Info */}
           <div>
-            <h4 className="font-semibold text-sm uppercase tracking-wider text-accent flex-shrink-0">
-              Contact Info
+            <h4 className="font-bold text-sm uppercase tracking-wider text-[#F4B400] mb-8">
+              CONTACT INFO
             </h4>
 
-            <ul className="space-y-4 text-sm text-white/70">
-
-              {/* Phone 1 */}
+            <ul className="space-y-5 text-sm text-gray-300">
               <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-accent flex-shrink-0" />
-                <a
-                  href="tel:+919820996758"
-                  className="hover:text-accent transition-colors"
-                >
+                <Phone className="h-4 w-4 text-[#F4B400]" />
+                <a href="tel:+919820996758" className="hover:text-[#F4B400] transition-colors">
                   +91 9820996758
                 </a>
               </li>
 
-              {/* Phone 2 */}
               <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-accent flex-shrink-0" />
-                <a
-                  href="tel:+919082616592"
-                  className="hover:text-accent transition-colors"
-                >
+                <Phone className="h-4 w-4 text-[#F4B400]" />
+                <a href="tel:+919082616592" className="hover:text-[#F4B400] transition-colors">
                   +91 9082616592
                 </a>
               </li>
 
-              {/* Phone 3 */}
               <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-accent flex-shrink-0" />
-                <a
-                  href="tel:+918655035263"
-                  className="hover:text-accent transition-colors"
-                >
+                <Phone className="h-4 w-4 text-[#F4B400]" />
+                <a href="tel:+918655035263" className="hover:text-[#F4B400] transition-colors">
                   +91 8655035263
                 </a>
               </li>
 
-              {/* Email */}
               <li className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-accent flex-shrink-0" />
-                <a
-                  href={`mailto:${CONTACT.email}`}
-                  className="hover:text-accent transition-colors"
-                >
+                <Mail className="h-5 w-5 text-[#F4B400] flex-shrink-0" />
+                <a href={`mailto:${CONTACT.email}`} className="hover:text-[#F4B400] transition-colors break-all">
                   {CONTACT.email}
                 </a>
               </li>
 
-              {/* Address */}
               <li className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                <MapPin className="h-4 w-4 text-[#F4B400] mt-1 shrink-0" />
                 <span className="leading-relaxed">
                   Shop No. 8, Tulip Society,<br />
                   Sector 6, Ghansoli,<br />
                   Navi Mumbai – 400701
                 </span>
               </li>
-
             </ul>
           </div>
 
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-white/10 my-6"></div>
-
         {/* Bottom Copyright */}
-        <div className="text-center text-xs text-white/50">
-          © {new Date().getFullYear()} {CONTACT.companyName}. All rights reserved.
+        <div className="pt-8 border-t border-white/10 text-center">
+          <p className="text-xs text-gray-400">
+            © {new Date().getFullYear()} Maharashtra Hiring Services. All rights reserved.
+          </p>
         </div>
 
       </div>

@@ -24,9 +24,9 @@ export default function HeroSection() {
           <img
             src={heroBg}
             alt="Industrial equipment site"
-            className="w-full h-full object-cover grayscale brightness-75"
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/85 to-secondary/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/70 to-secondary/40" />
         </div>
 
         {/* Content */}
@@ -47,7 +47,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-slate-300 text-base md:text-lg max-w-2xl mb-10">
-              We provide high-performance generators, diesel boom lifts 17-18 m,
+              We provide high-performance generators, diesel boom lifts,
               cranes, and heavy equipment backed by AMC support, expert installation,
               and 24/7 service reliability across Maharashtra.
             </p>

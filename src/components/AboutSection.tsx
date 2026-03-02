@@ -10,7 +10,7 @@ const stats = [
 
 export default function About() {
   return (
-    <section className="pt-40 pb-24 bg-muted/20">
+    <section className="pt-40 pb-24">
 
       <div className="max-w-7xl mx-auto px-6">
 
